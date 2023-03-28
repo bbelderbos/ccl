@@ -275,3 +275,4 @@ dump.rdb
 ccl/media/
 
 .pytest_cache/
+.env
