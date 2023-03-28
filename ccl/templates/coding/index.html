@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{{ exercise.title }}</h2>
+  <p>{{ exercise.description }}</p>
+
+  <form class="code" method="post" action="">
+    {% csrf_token %}
+    <textarea class="form-control" name="code" rows="20" cols="50">{{ exercise.start_code }}</textarea>
+    <button class="btn btn-primary" type="submit">{% translate "Submit" %} &raquo;</button>
+  </form>
+
+{% endblock content %}
